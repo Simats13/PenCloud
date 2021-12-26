@@ -18,7 +18,7 @@ if(isset($_POST['post'])){
 </head>
 <body>
 
-  <img id="logo" src="../data/images/logo_pencloud.png">
+  <img id="logo" src="../images/logo_pencloud.png">
 
   <ul id="login">
     <li style="float:right"><a href="../data/pages/login.php">Se connecter</a></li>
@@ -42,7 +42,7 @@ if(isset($_POST['post'])){
 
 <footer>
         <p id="footer">PenCloud ©2021</p>
-        <div id="intech" ><img class="logo_footer" src="../data/images/intech.png" alt="intech"></div>
-        <div id="aen"><img class="logo_footer" src="../data/images/aen.png" alt="aen"></div>
+        <div id="intech" ><img class="logo_footer" src="../images/intech.png" alt="intech"></div>
+        <div id="aen"><img class="logo_footer" src="../images/aen.png" alt="aen"></div>
     </footer>
 </html>
