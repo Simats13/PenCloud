@@ -1,9 +1,80 @@
 <?php 
+date_default_timezone_set('Europe/Paris');
+include('functions/main-functions.php'); 
+$db = ConnexionDB();
+
+
+function user_exist($url_parsed){
+  $db = ConnexionDB();
+  $a = [
+      'url' => $url_parsed,
+  ];
+
+  $sql = "SELECT * FROM website WHERE url = :url ";
+
+  $req = $db->prepare($sql);
+  $req->execute($a);
+  $exist = $req->rowCount($sql);
+  return $exist;
+  $req->closeCursor();
+ 
+
+}
 if(isset($_POST['post'])){
   $url = htmlspecialchars(trim($_POST['url']));
   $email = htmlspecialchars(trim($_POST['email']));
+
+  $arr = parse_url($url);
+
+  $url_parsed=strval($arr['host']);
+
+  // echo $url_parsed;
   
-  //exec("./script.sh $url $email > /dev/null 2>/dev/null &");
+
+  $date = date('Y-m-d H:i:s');
+  $compteur = 0;
+
+  $p = [
+    'url_parsed' => $url_parsed,
+    'date' => $date,
+    'compteur' => $compteur,
+];
+
+if(user_exist($url_parsed) == 0){
+
+$sql = "INSERT INTO website (url,date,compteur) VALUES (:url_parsed, :date, :compteur)";
+$req = $db->prepare($sql);
+$req->execute($p);
+$existe = 0;
+}else{
+  $sql = ("UPDATE website SET compteur=compteur + 1 WHERE url='$url_parsed' ");
+  
+$req = $db->prepare($sql);
+$req->execute($p);
+  $existe = 1;
+}
+
+//   if(user_exist($url_parsed) == 0){
+//   //ENVOI DES DONNEES DANS LA TABLE CONTENEUR
+//   $sql = "INSERT INTO website (url) VALUES (:url)";
+//   $stmt= $pdo->prepare($sql);
+//   $stmt->execute($data);
+//   // header("Location:/");
+//   // exit();
+// }else{
+//   echo "bonjour";
+// }
+
+
+
+
+
+
+
+
+
+  
+  // exec("./script.sh $url $email > /dev/null 2>/dev/null &");
 
 }
 ?>
@@ -21,17 +92,17 @@ if(isset($_POST['post'])){
   <img id="logo" src="../images/logo_pencloud.png">
 
   <ul id="login">
-    <li style="float:right"><a href="../data/pages/login.php">Se connecter</a></li>
+    <li style="float:right"><a href="../admin/login.php">Se connecter</a></li>
   </ul>
 
   <div id="container">
     <h1>Entrez les informations suivantes pour analyser votre site</h1>
     <div>
       <form method="post">
-      <input type="text" id="url" placeholder="URL de votre site" required>
+      <input type="text" id="url" name="url"placeholder="URL de votre site" required>
     </div>
     <div>
-      <input type="email" id="email" placeholder="Votre e-mail" required>
+      <input type="email" id="email" name="email" placeholder="Votre e-mail" required>
     </div>
     
     <button type="submit" name="post">Analyser</button>

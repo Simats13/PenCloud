@@ -31,7 +31,7 @@ spec:
         - name: EMAIL
           value: '$2'
         command: ['/bin/sh']
-        args: ['-c', 'while true; do cd /home/dev; ./automate.sh $(SITE);done']
+        args: ['-c', 'while true; do cd /home/dev; ./automate.sh $1 $2;done']
         ports:
         - name: http
           containerPort: 80" > /$1/test-deployment.yaml
