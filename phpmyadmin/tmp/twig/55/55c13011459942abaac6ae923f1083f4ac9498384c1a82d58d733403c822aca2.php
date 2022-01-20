@@ -94,6 +94,6 @@ class __TwigTemplate_ae0e00b9b8f7747ab7e0f44cc3f8550319e7c65f361e427b4e13d70e884
 
     public function getSourceContext()
     {
-        return new Source("", "console/query_action.twig", "/Users/paul/Sites/localhost/pencloud/kubernetes/data/phpmyadmin/templates/console/query_action.twig");
+        return new Source("", "console/query_action.twig", "/home/site/wwwroot/phpmyadmin/templates/console/query_action.twig");
     }
 }

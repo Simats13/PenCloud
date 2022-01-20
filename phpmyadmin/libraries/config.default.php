@@ -129,7 +129,7 @@ $i = 1;
  *
  * @global string $cfg['Servers'][$i]['host']
  */
-$cfg['Servers'][$i]['host'] = 'localhost';
+$cfg['Servers'][$i]['host'] = 'pencloud-server.mysql.database.azure.com';
 
 /**
  * MySQL port - leave blank for default port
@@ -150,7 +150,7 @@ $cfg['Servers'][$i]['socket'] = '';
  *
  * @global boolean $cfg['Servers'][$i]['ssl']
  */
-$cfg['Servers'][$i]['ssl'] = false;
+$cfg['Servers'][$i]['ssl'] = true;
 
 /**
  * Path to the key file when using SSL for connecting to the MySQL server

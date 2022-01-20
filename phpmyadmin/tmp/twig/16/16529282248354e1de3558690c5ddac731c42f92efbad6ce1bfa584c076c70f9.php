@@ -812,6 +812,6 @@ $context["database"], "name", [], "any", false, false, false, 243)]);
 
     public function getSourceContext()
     {
-        return new Source("", "server/databases/index.twig", "/Users/paul/Sites/localhost/pencloud/kubernetes/data/phpmyadmin/templates/server/databases/index.twig");
+        return new Source("", "server/databases/index.twig", "/home/site/wwwroot/phpmyadmin/templates/server/databases/index.twig");
     }
 }

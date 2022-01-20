@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* javascript/display.twig */
-class __TwigTemplate_8cba84e189922159ac32568096f47993c45bfac80f040f7298f10a660b25a4f9 extends \Twig\Template
+/* database/structure/overhead.twig */
+class __TwigTemplate_995bba8b43aa5748a05b8c05618c452091ea84093bf33d43ae1da499a524e445 extends \Twig\Template
 {
     private $source;
     private $macros = [];
@@ -34,27 +34,24 @@ class __TwigTemplate_8cba84e189922159ac32568096f47993c45bfac80f040f7298f10a660b2
     {
         $macros = $this->macros;
         // line 1
-        echo "<script type=\"text/javascript\">
-    if (typeof configInlineParams === 'undefined' || !Array.isArray(configInlineParams)) {
-        configInlineParams = [];
-    }
-    configInlineParams.push(function () {
-        ";
-        // line 6
-        echo twig_join_filter(($context["js_array"] ?? null), ";
-");
-        echo ";
-    });
-    if (typeof configScriptLoaded !== 'undefined' && configInlineParams) {
-        loadInlineConfig();
-    }
-</script>
+        echo "<a href=\"";
+        echo PhpMyAdmin\Url::getFromRoute("/table/structure", ($context["table_url_params"] ?? null));
+        echo "#showusage\" id=\"overhead\">
+  <span>";
+        // line 2
+        echo twig_escape_filter($this->env, ($context["formatted_overhead"] ?? null), "html", null, true);
+        echo "</span>&nbsp;
+  <span class=\"unit\">";
+        // line 3
+        echo twig_escape_filter($this->env, ($context["overhead_unit"] ?? null), "html", null, true);
+        echo "</span>
+</a>
 ";
     }
 
     public function getTemplateName()
     {
-        return "javascript/display.twig";
+        return "database/structure/overhead.twig";
     }
 
     public function isTraitable()
@@ -64,11 +61,11 @@ class __TwigTemplate_8cba84e189922159ac32568096f47993c45bfac80f040f7298f10a660b2
 
     public function getDebugInfo()
     {
-        return array (  44 => 6,  37 => 1,);
+        return array (  46 => 3,  42 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("", "javascript/display.twig", "/home/site/wwwroot/phpmyadmin/templates/javascript/display.twig");
+        return new Source("", "database/structure/overhead.twig", "/home/site/wwwroot/phpmyadmin/templates/database/structure/overhead.twig");
     }
 }

@@ -295,6 +295,6 @@ class __TwigTemplate_b68a56d260ab972848db05570f5622ac9b28ba57116212c97f8d9d4f0df
 
     public function getSourceContext()
     {
-        return new Source("", "import/javascript.twig", "/Users/paul/Sites/localhost/pencloud/kubernetes/data/phpmyadmin/templates/import/javascript.twig");
+        return new Source("", "import/javascript.twig", "/home/site/wwwroot/phpmyadmin/templates/import/javascript.twig");
     }
 }

@@ -67,6 +67,6 @@ class __TwigTemplate_dae3ac95128a832d35f5ed4a8aa4f45a6f5e23ce99aea8b31da0b531e85
 
     public function getSourceContext()
     {
-        return new Source("", "config/form_display/group_header.twig", "/Users/paul/Sites/localhost/pencloud/kubernetes/data/phpmyadmin/templates/config/form_display/group_header.twig");
+        return new Source("", "config/form_display/group_header.twig", "/home/site/wwwroot/phpmyadmin/templates/config/form_display/group_header.twig");
     }
 }

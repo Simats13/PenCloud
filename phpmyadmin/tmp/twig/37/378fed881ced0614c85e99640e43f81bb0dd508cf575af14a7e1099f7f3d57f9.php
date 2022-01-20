@@ -88,6 +88,6 @@ class __TwigTemplate_c9ddc712efb27e8853f3cfde791f5bd89893c00b84d82caf9ce611744f7
 
     public function getSourceContext()
     {
-        return new Source("", "console/toolbar.twig", "/Users/paul/Sites/localhost/pencloud/kubernetes/data/phpmyadmin/templates/console/toolbar.twig");
+        return new Source("", "console/toolbar.twig", "/home/site/wwwroot/phpmyadmin/templates/console/toolbar.twig");
     }
 }

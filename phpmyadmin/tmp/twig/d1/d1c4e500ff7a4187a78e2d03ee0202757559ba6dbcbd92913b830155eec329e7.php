@@ -81,6 +81,6 @@ class __TwigTemplate_e53e1437887b069f11662e4afd92699596c63244f4c30c2de43315bf361
 
     public function getSourceContext()
     {
-        return new Source("", "select_all.twig", "/Users/paul/Sites/localhost/pencloud/kubernetes/data/phpmyadmin/templates/select_all.twig");
+        return new Source("", "select_all.twig", "/home/site/wwwroot/phpmyadmin/templates/select_all.twig");
     }
 }

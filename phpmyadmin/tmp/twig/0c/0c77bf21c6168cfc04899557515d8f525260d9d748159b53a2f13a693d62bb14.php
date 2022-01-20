@@ -105,6 +105,6 @@ class __TwigTemplate_642cf01231f251bb82e8a5f51dce3d8b8451f1d327f5413dd8db4f95138
 
     public function getSourceContext()
     {
-        return new Source("", "top_menu.twig", "/Users/paul/Sites/localhost/pencloud/kubernetes/data/phpmyadmin/templates/top_menu.twig");
+        return new Source("", "top_menu.twig", "/home/site/wwwroot/phpmyadmin/templates/top_menu.twig");
     }
 }

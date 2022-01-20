@@ -3,9 +3,9 @@
 // include('includes/main-functions.php'); 
 include('includes/header.php'); 
 include('includes/main-functions.php'); 
-if(!isset($_SESSION['admin'])){
-  header("Location:login.php");
-}
+// if(!isset($_SESSION['admin'])){
+//   echo("<script>window.location = '/admin/login.php';</script>");
+// }
 include('includes/navbar.php'); 
 
 function get_website(){

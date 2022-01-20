@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* config/form_display/form_bottom.twig */
-class __TwigTemplate_02bb24bc13624fc40dd4b563c96cb9d0eb22c5495da9ba1e44221d0523a29a0b extends \Twig\Template
+/* database/structure/collation_definition.twig */
+class __TwigTemplate_3924451fdb2b0d1e3f36cb8c40ecfad5b55b6870f48c7c4115eb995fa7f710ec extends \Twig\Template
 {
     private $source;
     private $macros = [];
@@ -34,13 +34,22 @@ class __TwigTemplate_02bb24bc13624fc40dd4b563c96cb9d0eb22c5495da9ba1e44221d0523a
     {
         $macros = $this->macros;
         // line 1
-        echo "</form>
+        echo "<dfn title=\"";
+        echo twig_escape_filter($this->env, ($context["valueTitle"] ?? null), "html", null, true);
+        echo "\">";
+        echo twig_escape_filter($this->env, ($context["value"] ?? null), "html", null, true);
+        echo "</dfn>
 ";
     }
 
     public function getTemplateName()
     {
-        return "config/form_display/form_bottom.twig";
+        return "database/structure/collation_definition.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
     }
 
     public function getDebugInfo()
@@ -50,6 +59,6 @@ class __TwigTemplate_02bb24bc13624fc40dd4b563c96cb9d0eb22c5495da9ba1e44221d0523a
 
     public function getSourceContext()
     {
-        return new Source("", "config/form_display/form_bottom.twig", "/home/site/wwwroot/phpmyadmin/templates/config/form_display/form_bottom.twig");
+        return new Source("", "database/structure/collation_definition.twig", "/home/site/wwwroot/phpmyadmin/templates/database/structure/collation_definition.twig");
     }
 }

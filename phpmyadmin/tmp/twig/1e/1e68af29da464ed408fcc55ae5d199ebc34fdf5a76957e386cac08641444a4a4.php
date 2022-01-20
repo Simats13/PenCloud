@@ -92,6 +92,6 @@ class __TwigTemplate_9b4f5b2b32ae780681262d24a8a67c7cebd2906325aab14fdd504724d82
 
     public function getSourceContext()
     {
-        return new Source("", "login/header.twig", "/Applications/MAMP/htdocs/pencloud/kubernetes/data/phpmyadmin/templates/login/header.twig");
+        return new Source("", "login/header.twig", "/home/site/wwwroot/phpmyadmin/templates/login/header.twig");
     }
 }

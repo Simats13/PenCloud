@@ -74,6 +74,6 @@ class __TwigTemplate_e589d393eb66b504613b55493c2e70ed50527bfab367ebfab52e56ab4f7
 
     public function getSourceContext()
     {
-        return new Source("", "config/form_display/tabs_top.twig", "/Users/paul/Sites/localhost/pencloud/kubernetes/data/phpmyadmin/templates/config/form_display/tabs_top.twig");
+        return new Source("", "config/form_display/tabs_top.twig", "/home/site/wwwroot/phpmyadmin/templates/config/form_display/tabs_top.twig");
     }
 }

@@ -297,6 +297,6 @@ class __TwigTemplate_305b1cf79147ceb7659666f3f042c18f2085106dabf9edd60604c4c8188
 
     public function getSourceContext()
     {
-        return new Source("", "login/form.twig", "/Applications/MAMP/htdocs/pencloud/kubernetes/data/phpmyadmin/templates/login/form.twig");
+        return new Source("", "login/form.twig", "/home/site/wwwroot/phpmyadmin/templates/login/form.twig");
     }
 }

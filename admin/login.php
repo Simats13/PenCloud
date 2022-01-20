@@ -5,7 +5,7 @@ include('includes/header.php');
 include('includes/main-functions.php'); 
 //SI UNE SESSION EXISTE DEJA, AFFICHER L'ADMIN
 if(isset($_SESSION['admin'])){
-    header("Location:index.php");
+  echo("<script>window.location = '/admin/index.php';</script>");
 }
 
 

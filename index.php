@@ -28,7 +28,6 @@ if(isset($_POST['post'])){
 
   $url_parsed=strval($arr['host']);
 
-  // echo $url_parsed;
   
 
   $date = date('Y-m-d H:i:s');
@@ -40,30 +39,19 @@ if(isset($_POST['post'])){
     'compteur' => $compteur,
 ];
 
-if(user_exist($url_parsed) == 0){
+  if(user_exist($url_parsed) == 0){
+    $sql = "INSERT INTO website (url,date,compteur) VALUES (:url_parsed, :date, :compteur)";
+    $req = $db->prepare($sql);
+    $req->execute($p);
+    $existe = 0;
+    exec("./script.sh $url $email > /dev/null 2>/dev/null &");
+  }else{
+    $sql = ("UPDATE website SET compteur=compteur + 1 WHERE url='$url_parsed' ");  
+    $req = $db->prepare($sql);
+    $req->execute($p);
+    $existe = 1;
+  }
 
-$sql = "INSERT INTO website (url,date,compteur) VALUES (:url_parsed, :date, :compteur)";
-$req = $db->prepare($sql);
-$req->execute($p);
-$existe = 0;
-}else{
-  $sql = ("UPDATE website SET compteur=compteur + 1 WHERE url='$url_parsed' ");
-  
-$req = $db->prepare($sql);
-$req->execute($p);
-  $existe = 1;
-}
-
-//   if(user_exist($url_parsed) == 0){
-//   //ENVOI DES DONNEES DANS LA TABLE CONTENEUR
-//   $sql = "INSERT INTO website (url) VALUES (:url)";
-//   $stmt= $pdo->prepare($sql);
-//   $stmt->execute($data);
-//   // header("Location:/");
-//   // exit();
-// }else{
-//   echo "bonjour";
-// }
 
 
 
@@ -74,7 +62,6 @@ $req->execute($p);
 
 
   
-  // exec("./script.sh $url $email > /dev/null 2>/dev/null &");
 
 }
 ?>
@@ -86,6 +73,7 @@ $req->execute($p);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pen'Cloud</title>
   <link href="./css/main.css" rel="stylesheet">
+  
 </head>
 <body>
 

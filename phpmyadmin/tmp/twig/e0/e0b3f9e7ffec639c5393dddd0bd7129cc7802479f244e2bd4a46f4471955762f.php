@@ -542,6 +542,6 @@ function extendingValidatorMessages () {
 
     public function getSourceContext()
     {
-        return new Source("", "javascript/variables.twig", "/Applications/MAMP/htdocs/pencloud/kubernetes/data/phpmyadmin/templates/javascript/variables.twig");
+        return new Source("", "javascript/variables.twig", "/home/site/wwwroot/phpmyadmin/templates/javascript/variables.twig");
     }
 }

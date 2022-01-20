@@ -66,6 +66,6 @@ class __TwigTemplate_def95f6dcf84913c38abb637ede78bed0383e4dfc1c84384594d6f684f2
 
     public function getSourceContext()
     {
-        return new Source("", "database/import/index.twig", "/Users/paul/Sites/localhost/pencloud/kubernetes/data/phpmyadmin/templates/database/import/index.twig");
+        return new Source("", "database/import/index.twig", "/home/site/wwwroot/phpmyadmin/templates/database/import/index.twig");
     }
 }
